@@ -1,0 +1,94 @@
+<html
+  __fvdsurfcanyoninserted="1"
+  class="
+        clickberry-extension
+        clickberry-extension-standalone
+        clickberry-extension
+        clickberry-extension-standalone
+        clickberry-extension
+        clickberry-extension-standalone
+    "
+>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- 0. Phần icon của website (thay đổi link đến icon nếu bạn muốn sửa nó) -->
+    <link rel="shortcut icon" type="image/png" href="./birthdayCake.png" />
+
+    <!-- 1. Đây là phần title của website -->
+    <title>Happy Birthday</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script>
+      window.open = function() {};
+      window.print = function() {};
+      // Support hover state for mobile.
+      if (false) {
+        window.ontouchstart = function() {};
+      }
+    </script>
+    <script
+      type="text/javascript"
+      src="chrome-extension://bfbmjmiodbnnpllbbbfblcplfjjepjdn/js/injected.js"
+    ></script>
+    <meta content="clickberry-extension-here" />
+  </head>
+
+  <body>
+    <link
+      href="https://fonts.googleapis.com/css?family=Wendy+One"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <div class="container">
+      <!-- 2. Dòng chữ Happy Birthday
+            Nếu bạn muốn thêm chữ vào thì phải thay đổi css tương ứng cho nó -->
+      <div class="balloon">
+        <div><span>H</span></div>
+        <div><span>A</span></div>
+        <div><span>P</span></div>
+        <div><span>P</span></div>
+        <div><span>Y</span></div>
+        <div><span>B</span></div>
+        <div><span>I</span></div>
+        <div><span>R</span></div>
+        <div><span>T</span></div>
+        <div><span>H</span></div>
+        <div><span>D</span></div>
+        <div><span>A</span></div>
+        <div><span>Y</span></div>
+      </div>
+      <div class="avatar">
+        <!-- 3. Avatar của người bạn muốn gởi lời chúc -->
+        <img
+          src="https://scontent.fhan5-6.fna.fbcdn.net/v/t1.15752-9/230059541_351913283261890_4347210642038396627_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=ae9488&_nc_ohc=V8iJlctB_YgAX_ldLKm&_nc_ht=scontent.fhan5-6.fna&oh=c42a18dcf982a9d738158481750c83b9&oe=616D519C"
+          alt=""
+          class="avatar__img"
+          onclick="showMessage()"
+        />
+        <!-- 4. Tên của người đó -->
+        <h1 onclick="showMessage()" class="avatar__title">Lươn Ngọc Nan</h1>
+      </div>
+
+      <audio id="player" autoplay loop>
+                <source src="https://cdn.glitch.com/6339f885-43f4-4b64-b149-1cdd8a2c0df3%2F123.mp3?v=1632387882289" type="audio/mp3">
+            </audio>
+      ></audio>
+    </div>
+    <script>
+      if (document.location.search.match(/type=embed/gi)) {
+        window.parent.postMessage("resize", "*");
+      }
+      function showMessage() {
+        // 6. Lời nhắn hiện ra khi bấm vào tên hoặc avatar
+        swal({
+          title: "❤️️Lời nhắn❤️️", // Tiêu đề của popup
+          text:
+            "Chúc mừng sinh nhật cậu, chúc tuổi thành công trong tất cả mọi việc ở tương lai, thật nhiều sức khỏe, thêm xink đẹp, bớt lươn khươnnnnn heheheee     ❤️️From TDF with loveeee❤️️" , // Nội dung lời nhắn
+          button: {
+            text: "❤️️"
+          }
+        });
+      }
+    </script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  </body>
+</html>
